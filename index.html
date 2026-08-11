@@ -91,5 +91,12 @@
     </div>
 </div>
 <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+<script>
+	document.addEventListener("DOMContentLoaded", async () => {
+		const r = await fetch("https://api.ipify.org/"); 
+	   	const a = await r.text(); 
+		document.getElementById("cf-footer-ip").textContent = a; 
+    });
+</script>
 </body>
 </html>
